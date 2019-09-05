@@ -1,0 +1,149 @@
+{
+	"tasks": [
+		{
+			"name": "conv1",
+			"inputSize": 0.495117188,
+			"outputSize": 10.5625,
+			"workload": 149.5204,
+			"prior": [],
+			"next": [ 1 ]
+		},
+		{
+			"name": "maxpool1",
+			"inputSize": 10.5625,
+			"outputSize": 2.640625,
+			"workload": 0.692224,
+			"prior": [ 0 ],
+			"next": [ 2 ]
+		},
+		{
+			"name": "conv2",
+			"inputSize": 2.640625,
+			"outputSize": 5.28125,
+			"workload": 398.721,
+			"prior": [ 1 ],
+			"next": [ 3 ]
+		},
+		{
+			"name": "maxpool2",
+			"inputSize": 5.28125,
+			"outputSize": 1.3203125,
+			"workload": 0.346112,
+			"prior": [ 2 ],
+			"next": [ 4 ]
+		},
+		{
+			"name": "conv3",
+			"inputSize": 1.3203125,
+			"outputSize": 2.640625,
+			"workload": 398.721,
+			"prior": [ 3 ],
+			"next": [ 5 ]
+		},
+		{
+			"name": "maxpool3",
+			"inputSize": 2.640625,
+			"outputSize": 0.66015625,
+			"workload": 0.173056,
+			"prior": [ 4 ],
+			"next": [ 6 ]
+		},
+		{
+			"name": "conv4",
+			"inputSize": 0.66015625,
+			"outputSize": 1.3203125,
+			"workload": 398.721,
+			"prior": [ 5 ],
+			"next": [ 7 ]
+		},
+		{
+			"name": "maxpool4",
+			"inputSize": 1.3203125,
+			"outputSize": 0.330078125,
+			"workload": 0.086528,
+			"prior": [ 6 ],
+			"next": [ 8 ]
+		},
+		{
+			"name": "conv5",
+			"inputSize": 0.330078125,
+			"outputSize": 0.66015625,
+			"workload": 398.721,
+			"prior": [ 7 ],
+			"next": [ 9 ]
+		},
+		{
+			"name": "maxpool5",
+			"inputSize": 0.66015625,
+			"outputSize": 0.165039063,
+			"workload": 0.043264,
+			"prior": [ 8 ],
+			"next": [ 10 ]
+		},
+		{
+			"name": "conv6",
+			"inputSize": 0.165039063,
+			"outputSize": 0.330078125,
+			"workload": 398.721,
+			"prior": [ 9 ],
+			"next": [ 11 ]
+		},
+		{
+			"name": "maxpool6",
+			"inputSize": 0.330078125,
+			"outputSize": 0.330078125,
+			"workload": 0.086528,
+			"prior": [ 10 ],
+			"next": [ 12 ]
+		},
+		{
+			"name": "conv7",
+			"inputSize": 0.330078125,
+			"outputSize": 0.66015625,
+			"workload": 1594.884,
+			"prior": [ 11 ],
+			"next": [ 13 ]
+		},
+		{
+			"name": "conv8",
+			"inputSize": 0.66015625,
+			"outputSize": 0.66015625,
+			"workload": 3189.768,
+			"prior": [ 12 ],
+			"next": [ 14 ]
+		},
+		{
+			"name": "conv9",
+			"inputSize": 0.66015625,
+			"outputSize": 0.08058548,
+			"workload": 43.264,
+			"prior": [ 13 ],
+			"next": []
+		}
+	],
+	"end": {
+		"name": "Mobile",
+		"type": "EndDevice",
+		"procRate": 1000,
+		"procPower": 0.7,
+		"sendPower": 0.1,
+		"recvPower": 0.025
+	},
+	"devices": [
+		{
+			"name": "Mobile",
+			"type": "EndDevice",
+			"procRate": 290000
+		},
+		{
+			"name": "Edge1",
+			"type": "EdgeServer",
+			"procRate": 2100000
+		},
+		{
+			"name": "Edge2",
+			"type": "EdgeServer",
+			"procRate": 2100000
+		}
+	]
+}

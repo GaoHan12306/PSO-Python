@@ -1,0 +1,77 @@
+{
+	"tasks": [
+		{
+			"name": "task1",
+			"inputSize": 1,
+			"outputSize": 1,
+			"workload": 1000,
+			"prior": [],
+			"next": [ 1 ]
+		},
+		{
+			"name": "task2",
+			"inputSize": 1,
+			"outputSize": 0.6,
+			"workload": 1500,
+			"prior": [ 0 ],
+			"next": [ 2 ]
+		},
+		{
+			"name": "task3",
+			"inputSize": 0.6,
+			"outputSize": 0.8,
+			"workload": 2000,
+			"prior": [ 1 ],
+			"next": [ 3 ]
+		},
+		{
+			"name": "task4",
+			"inputSize": 0.8,
+			"outputSize": 0.05,
+			"workload": 1500,
+			"prior": [ 2 ],
+			"next": [ 4 ]
+		},
+		{
+			"name": "task5",
+			"inputSize": 0.05,
+			"outputSize": 0.06,
+			"workload": 2500,
+			"prior": [ 3 ],
+			"next": [ 5 ]
+		},
+		{
+			"name": "task6",
+			"inputSize": 0.06,
+			"outputSize": 0.06,
+			"workload": 250,
+			"prior": [ 4 ],
+			"next": []
+		}
+	],
+	"end": {
+		"name": "Mobile",
+		"type": "EndDevice",
+		"procRate": 1000,
+		"procPower": 0.7,
+		"sendPower": 0.1,
+		"recvPower": 0.025
+	},
+	"devices": [
+		{
+			"name": "Mobile",
+			"type": "EndDevice",
+			"procRate": 1000
+		},
+		{
+			"name": "Edge",
+			"type": "EdgeServer",
+			"procRate": 1300
+		},
+		{
+			"name": "Cloud",
+			"type": "CloudServer",
+			"procRate": 1600
+		}
+	]
+}
